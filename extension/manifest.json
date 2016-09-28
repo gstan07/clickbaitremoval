@@ -1,0 +1,16 @@
+{
+  "name": "Clickbait removal",
+  "version": "0.1",
+  "manifest_version":2,
+  "description": "clickbait removal",
+   "background": {"page": "background.html"},
+  "browser_action": {
+    "name": "Clickbait removal"
+  },
+  "content_scripts": [ {
+    "js": ["clickbait.removal.js"],
+    // "css":["customstyles.css"],
+    "matches": ["<all_urls>"],
+    "run_at": "document_end"
+  }]
+}
